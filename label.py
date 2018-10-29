@@ -25,7 +25,7 @@ if __name__=="__main__":
 
     print('Found the following files:', files)
 
-    caps = [{'fname': f, 'vcap': cv2.VideoCapture(f)} for f in files]
+    caps = [{'fname': f, 'vcap': cv2.VideoCapture(os.path.join(input_dir, f))} for f in files]
 
     os.mkdir(output_dir)
 
